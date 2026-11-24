@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jag'z Beauty Spa and Massage</title>
+  <meta name="description" content="Book your spa, massage, hair and nail appointment online at Jag'z Beauty Spa and Massage.">
+
+  <!-- Fonts: Great Vibes = elegant cursive, Cinzel = logo-style capitals, Lato = clear bold text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Great+Vibes&family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ================= TOP MENU ================= -->
+  <header class="site-header">
+    <a href="#top" class="brand">
+      <img src="images/logo.png" alt="Jag'z Beauty Spa and Massage logo" class="brand-logo">
+      <span class="brand-text">
+        <span class="brand-name">Jag'z</span>
+        <span class="brand-tag">Beauty Spa &amp; Massage</span>
+      </span>
+    </a>
+
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="menu-button" aria-label="Open menu">&#9776; Menu</label>
+
+    <nav class="main-nav">
+      <a href="#pricing">Pricing</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="#booking" class="nav-book">Booking</a>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+      <img src="images/logo.png" alt="" class="hero-logo">
+      <h1 class="script">Welcome to Jag'z</h1>
+      <p class="hero-tag">Beauty Spa &amp; Massage</p>
+      <p class="hero-text">Relax, refresh, and feel beautiful.</p>
+      <a href="#booking" class="button">Book an Appointment</a>
+    </section>
+
+    <!-- ================= SERVICES ================= -->
+    <section id="services" class="section">
+      <h2 class="script">Our Services</h2>
+      <div class="cards">
+
+        <div class="card">
+          <img src="images/massage.jpg" alt="Massage">
+          <h3>Massage</h3>
+          <p>Relaxing and therapeutic massage.</p>
+        </div>
+
+        <div class="card">
+          <img src="images/spa.jpg" alt="Facials and spa treatments">
+          <h3>Spa &amp; Facials</h3>
+          <p>Facials and skin care treatments.</p>
+        </div>
+
+        <div class="card">
+          <img src="images/hair.jpg" alt="Hair styling">
+          <h3>Hair</h3>
+          <p>Cuts, colour, and styling.</p>
+        </div>
+
+        <div class="card">
+          <img src="images/nails.jpg" alt="Manicure and pedicure">
+          <h3>Nails</h3>
+          <p>Manicures, pedicures, and gel nails.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= PRICING ================= -->
+    <section id="pricing" class="section dark-section">
+      <h2 class="script">Pricing</h2>
+      <p class="note">Prices are examples. Replace them with your own.</p>
+
+      <div class="price-grid">
+        <div class="price-box">
+          <h3>Massage</h3>
+          <ul>
+            <li><span>30 Minutes</span><b>$50</b></li>
+            <li><span>60 Minutes</span><b>$90</b></li>
+            <li><span>90 Minutes</span><b>$130</b></li>
+            <li><span>Hot Stone Add-on</span><b>$20</b></li>
+          </ul>
+        </div>
+
+        <div class="price-box">
+          <h3>Spa &amp; Beauty</h3>
+          <ul>
+            <li><span>Facial</span><b>$80</b></li>
+            <li><span>Waxing (from)</span><b>$20</b></li>
+            <li><span>Brow Shaping</span><b>$30</b></li>
+            <li><span>Lash Lift</span><b>$85</b></li>
+          </ul>
+        </div>
+
+        <div class="price-box">
+          <h3>Hair &amp; Nails</h3>
+          <ul>
+            <li><span>Women's Cut &amp; Style</span><b>$60</b></li>
+            <li><span>Colour</span><b>$120</b></li>
+            <li><span>Manicure</span><b>$35</b></li>
+            <li><span>Pedicure</span><b>$50</b></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section id="about" class="section">
+      <h2 class="script">About Us</h2>
+      <div class="about">
+        <img src="images/about.jpg" alt="Inside Jag'z Beauty Spa and Massage">
+        <div>
+          <p>Welcome to Jag'z Beauty Spa and Massage! We are a warm, relaxing space where every guest is treated like family.</p>
+          <p>Write a few sentences here about you: how long you have been in business, your experience, and what makes your spa special.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= BOOKING ================= -->
+    <section id="booking" class="section dark-section">
+      <h2 class="script">Book Your Appointment</h2>
+      <p class="note">Choose a day and time below. Your appointment is saved to our calendar right away.</p>
+
+      <!-- PASTE YOUR GOOGLE CALENDAR BOOKING LINK in BOTH places below -->
+      <div class="booking-frame">
+        <iframe
+          src="PASTE_YOUR_GOOGLE_BOOKING_LINK_HERE"
+          title="Book an appointment"
+          loading="lazy"></iframe>
+      </div>
+
+      <p class="note">
+        Booking window not showing?
+        <a class="gold-link" href="PASTE_YOUR_GOOGLE_BOOKING_LINK_HERE" target="_blank" rel="noopener">Click here to open the booking page</a>
+      </p>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section id="contact" class="section">
+      <h2 class="script">Contact Us</h2>
+      <div class="contact-grid">
+        <div>
+          <h3>Visit Us</h3>
+          <p>123 Main Street<br>Your City, Province/State<br>Postal Code</p>
+        </div>
+        <div>
+          <h3>Call or Email</h3>
+          <p>Phone: <a class="gold-link" href="tel:+10000000000">(000) 000-0000</a><br>
+             Email: <a class="gold-link" href="mailto:hello@yoursalon.com">hello@yoursalon.com</a></p>
+        </div>
+        <div>
+          <h3>Hours</h3>
+          <p>Tue - Fri: 9am - 6pm<br>Saturday: 9am - 4pm<br>Sun &amp; Mon: Closed</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p class="script footer-script">Jag'z Beauty Spa &amp; Massage</p>
+    <p>&copy; 2026 Jag'z Beauty Spa and Massage. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

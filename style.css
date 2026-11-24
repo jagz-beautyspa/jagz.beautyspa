@@ -1,0 +1,182 @@
+/* ============ COLOURS (change here to change the whole site) ============ */
+:root {
+  --black: #000000;          /* matches the logo's pure black */
+  --black-soft: #121212;
+  --gold: #d4a937;
+  --gold-light: #f3dc8a;
+  --gold-dark: #a8801f;
+  --white: #fdfaf2;
+  /* shiny gold gradient like the logo */
+  --gold-gradient: linear-gradient(135deg, #a8801f 0%, #f3dc8a 45%, #d4a937 70%, #f3dc8a 100%);
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+
+body {
+  margin: 0;
+  background: var(--black);
+  color: var(--white);
+  font-family: 'Lato', Arial, sans-serif;
+  font-size: 20px;          /* large, easy to read */
+  line-height: 1.7;
+  font-weight: 700;         /* clear bold text */
+}
+
+/* ============ CURSIVE HEADINGS (gold shine) ============ */
+.script {
+  font-family: 'Great Vibes', cursive;
+  font-weight: 400;
+  text-align: center;
+  margin: 0 0 20px;
+  color: var(--gold);
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+h2.script { font-size: 3.6rem; }
+h3 { color: var(--gold-light); font-size: 1.5rem; margin: 10px 0; }
+
+a { color: inherit; }
+.gold-link { color: var(--gold-light); text-decoration: underline; }
+
+/* ============ TOP MENU ============ */
+.site-header {
+  position: sticky; top: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 8px 24px;
+  background: var(--black);
+  border-bottom: 3px solid var(--gold);
+}
+.brand { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+.brand-logo {
+  height: 70px; width: 70px; border-radius: 50%;
+  border: 2px solid var(--gold); background: var(--gold);
+}
+.brand-text { display: flex; flex-direction: column; line-height: 1.1; }
+.brand-name {
+  font-family: 'Great Vibes', cursive; font-size: 2.4rem;
+  background: var(--gold-gradient); -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; color: var(--gold);
+}
+.brand-tag {
+  font-family: 'Cinzel', serif; font-size: 0.8rem; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--gold-light);
+}
+
+.main-nav { display: flex; gap: 8px; flex-wrap: wrap; }
+.main-nav a {
+  text-decoration: none; color: var(--white);
+  padding: 10px 16px; border-radius: 30px;
+  font-family: 'Cinzel', serif; font-size: 1.1rem; letter-spacing: 1px; text-transform: uppercase;
+}
+.main-nav a:hover { color: var(--black); background: var(--gold); }
+.main-nav .nav-book { background: var(--gold-gradient); color: var(--black); }
+.main-nav .nav-book:hover { background: var(--gold-light); }
+
+/* phone menu button (hidden on large screens) */
+.menu-toggle { display: none; }
+.menu-button {
+  display: none; cursor: pointer;
+  border: 2px solid var(--gold); color: var(--gold);
+  padding: 8px 16px; border-radius: 30px; font-size: 1.1rem;
+}
+
+/* ============ HERO ============ */
+.hero {
+  text-align: center;
+  padding: 70px 20px 90px;
+  background: radial-gradient(circle at center, var(--black-soft), var(--black));
+  border-bottom: 1px solid var(--gold);
+}
+.hero-logo {
+  width: 220px; height: 220px; border-radius: 50%;
+  border: 3px solid var(--gold); background: var(--gold);
+  box-shadow: 0 0 30px rgba(212, 169, 55, 0.35);
+  margin-bottom: 10px;
+}
+.hero h1 { font-size: 4.8rem; line-height: 1.1; margin-bottom: 0; }
+.hero-tag {
+  font-family: 'Cinzel', serif; font-size: 1.4rem; letter-spacing: 4px;
+  text-transform: uppercase; color: var(--gold-light); margin: 0 0 14px;
+}
+.hero-text { font-size: 1.5rem; margin: 0 0 30px; }
+
+.button {
+  display: inline-block; text-decoration: none;
+  background: var(--gold-gradient); color: var(--black);
+  padding: 16px 38px; border-radius: 40px;
+  font-size: 1.3rem; font-weight: 900; letter-spacing: 1px;
+  border: 2px solid var(--gold);
+}
+.button:hover { background: var(--black); color: var(--gold); }
+
+/* ============ SECTIONS ============ */
+.section { max-width: 1100px; margin: 0 auto; padding: 70px 24px; }
+.dark-section {
+  max-width: none; background: var(--black-soft);
+  border-top: 1px solid var(--gold); border-bottom: 1px solid var(--gold);
+}
+.dark-section > * { max-width: 1100px; margin-left: auto; margin-right: auto; }
+.note { text-align: center; }
+
+/* ============ SERVICE CARDS ============ */
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 24px; }
+.card {
+  background: var(--black-soft);
+  border: 2px solid var(--gold); border-radius: 18px;
+  padding: 14px; text-align: center;
+}
+.card img {
+  width: 100%; height: 200px; object-fit: cover;
+  border-radius: 12px; background: var(--gold);   /* gold box shows if photo is missing */
+}
+.card p { margin: 0 0 10px; }
+
+/* ============ PRICING ============ */
+.price-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 30px; }
+.price-box { border: 2px solid var(--gold); border-radius: 18px; padding: 20px 24px; background: var(--black); }
+.price-box h3 { text-align: center; font-family: 'Cinzel', serif; font-size: 1.6rem; letter-spacing: 1px; }
+.price-box ul { list-style: none; margin: 0; padding: 0; }
+.price-box li { display: flex; justify-content: space-between; gap: 10px; padding: 10px 0; border-bottom: 1px dotted var(--gold); }
+.price-box li:last-child { border-bottom: none; }
+.price-box b { color: var(--gold-light); font-weight: 900; }
+
+/* ============ ABOUT ============ */
+.about { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: center; }
+.about img {
+  width: 100%; height: 340px; object-fit: cover;
+  border-radius: 18px; border: 3px solid var(--gold); background: var(--gold);
+}
+
+/* ============ BOOKING ============ */
+.booking-frame {
+  margin: 24px auto; border: 3px solid var(--gold);
+  border-radius: 18px; overflow: hidden; background: #fff;
+}
+.booking-frame iframe { width: 100%; height: 700px; border: 0; display: block; }
+
+/* ============ CONTACT ============ */
+.contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; text-align: center; }
+
+/* ============ FOOTER ============ */
+.site-footer { text-align: center; padding: 30px 20px; border-top: 3px solid var(--gold); }
+.footer-script { font-size: 2.6rem; margin: 0; }
+.site-footer p { margin: 4px 0; }
+
+/* ============ PHONES & TABLETS ============ */
+@media (max-width: 860px) {
+  .menu-button { display: inline-block; }
+  .main-nav { display: none; width: 100%; flex-direction: column; margin-top: 10px; }
+  .menu-toggle:checked ~ .main-nav { display: flex; }
+  .main-nav a { text-align: center; border: 1px solid var(--gold); }
+  .hero h1 { font-size: 3.2rem; }
+  .hero-logo { width: 170px; height: 170px; }
+  h2.script { font-size: 2.7rem; }
+  .about { grid-template-columns: 1fr; }
+  .brand-name { font-size: 2rem; }
+  .brand-tag { font-size: 0.65rem; }
+}
